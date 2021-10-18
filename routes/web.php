@@ -28,7 +28,12 @@ Route::get('/',function (){
     return redirect("https://www.google.com.tw/");
 });
 */
-/* 接收必要參數 */
+/* 接收必要參數
 Route::get('hello/{name}',function ($name){
+    return 'Hello, '.$name;
+});
+*/
+/* 接收選擇性參數 */
+Route::get("hello/{name?}", function ($name = "Everyone"){
     return 'Hello, '.$name;
 });
