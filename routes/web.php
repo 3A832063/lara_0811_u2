@@ -29,6 +29,6 @@ Route::get('/',function (){
 });
 */
 /* 接收必要參數 */
-Route::get('hello/123',function ($name){
+Route::get('hello/{name}',function ($name){
     return 'Hello, '.$name;
 });
