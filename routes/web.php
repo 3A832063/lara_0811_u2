@@ -23,9 +23,12 @@ Route::get('/', function () {
     return view("welcome");
 });
 */
-/* 跳轉⾴⾯ */
+/* 跳轉⾴⾯
 Route::get('/',function (){
     return redirect("https://www.google.com.tw/");
 });
-
-
+*/
+/* 接收必要參數 */
+Route::get('hello/123',function ($name){
+    return 'Hello, '.$name;
+});
