@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* 回傳字串
+Route::get('/', function () {
+    return 'any string';
+});
+*/
+/* 回傳視窗
 Route::get('/', function () {
     return view("welcome");
 });
+*/
+/* 跳轉⾴⾯ */
+Route::get('/',function (){
+    return redirect("https://www.google.com.tw/");
+});
+
+
