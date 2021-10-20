@@ -38,4 +38,4 @@ Route::get('hello/{name}',function ($name){
 /* 接收選擇性參數 */
 Route::get("hello/{name?}", function ($name = "Everyone"){
     return 'Hello, '.$name;
-});
+})->name('hello.index');
