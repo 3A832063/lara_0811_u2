@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 /* 回傳字串 */
-Route::get('home', function () {
+Route::get('home1', function () {
     return 'any string';
 });
 
@@ -49,3 +50,5 @@ Route::group(['prefix' => 'admin'] ,function (){
         return 'dashboard';
     });
 });
+
+Route::get('home',[HomeController::class,'index'])->name('home.index');
