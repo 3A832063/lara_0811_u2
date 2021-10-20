@@ -39,3 +39,13 @@ Route::get('hello/{name}',function ($name){
 Route::get("hello/{name?}", function ($name = "Everyone"){
     return 'Hello, '.$name;
 })->name('hello.index');
+/* 設定 dashboard路徑的 Route */
+Route::get('dashboard',function (){
+    return 'dashboard';
+});
+/* 設定另一個 Route 以群組包起來設定 prefix */
+Route::group(['prefix' => 'admin'] ,function (){
+    Route::get('dashboard',function (){
+        return 'dashboard';
+    });
+});
