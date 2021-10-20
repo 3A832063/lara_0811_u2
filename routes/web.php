@@ -13,26 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* 回傳字串
-Route::get('/', function () {
+/* 回傳字串 */
+Route::get('home', function () {
     return 'any string';
 });
-*/
-/* 回傳視窗
+
+/* 回傳視窗 */
 Route::get('/', function () {
     return view("welcome");
 });
-*/
-/* 跳轉⾴⾯
-Route::get('/',function (){
-    return redirect("https://www.google.com.tw/");
+
+/* 跳轉⾴⾯ */
+Route::get('r1',function (){
+    return redirect("r2");
 });
-*/
-/* 接收必要參數
+Route::get('r2', function () {
+    return view("welcome");
+});
+/* 接收必要參數 */
 Route::get('hello/{name}',function ($name){
     return 'Hello, '.$name;
 });
-*/
+
 /* 接收選擇性參數 */
 Route::get("hello/{name?}", function ($name = "Everyone"){
     return 'Hello, '.$name;
